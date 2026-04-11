@@ -50,6 +50,16 @@ project:
       children:
         - file: chapters/ch08-priority-queues-and-triage/exercises.md
           title: 練習題
+    - file: chapters/ch09-sliding-windows-and-monitoring/index.md
+      title: 第九章：滑動視窗與異常監控：從連續數據找出該出手的區間
+      children:
+        - file: chapters/ch09-sliding-windows-and-monitoring/exercises.md
+          title: 練習題
+    - file: chapters/ch10-interval-merging-and-capacity/index.md
+      title: 第十章：區間合併與容量規劃：把零碎時段整理成可執行的資源配置
+      children:
+        - file: chapters/ch10-interval-merging-and-capacity/exercises.md
+          title: 練習題
 
 site:
   template: book-theme

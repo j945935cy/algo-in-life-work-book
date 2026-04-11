@@ -22,8 +22,8 @@ short_title: 書籍首頁
 | 項目 | 目前狀態 |
 | --- | --- |
 | 書稿首頁與前言 | 已完成 |
-| 章節骨架 | 已完成第 1 到第 8 章 |
-| 可執行範例 | 已完成 8 組 |
+| 章節骨架 | 已完成第 1 到第 10 章 |
+| 可執行範例 | 已完成 10 組 |
 | 測試 | `pytest -q` 全綠 |
 | HTML 建站 | 已可產出本地站點 |
 
@@ -87,6 +87,18 @@ short_title: 書籍首頁
 
 把客服工單、突發支援與臨時需求轉成優先佇列問題，學會在不打亂整體節奏的前提下，先處理最急迫的任務。
 
+### 第九章
+
+[第九章：滑動視窗與異常監控：從連續數據找出該出手的區間](chapters/ch09-sliding-windows-and-monitoring/index)
+
+把錯誤率、流量或工單數量轉成連續時間序列，學會用滑動視窗快速找出超標區段與最需要關注的峰值區間。
+
+### 第十章
+
+[第十章：區間合併與容量規劃：把零碎時段整理成可執行的資源配置](chapters/ch10-interval-merging-and-capacity/index)
+
+把會議室、設備借用與人力班表轉成時段區間，先合併重疊或相接的占用，再找出同時使用量最高的尖峰區段。
+
 ## 建議閱讀順序
 
 若你是第一次閱讀，建議依序從前言與前三章往下看；若你是想直接評估 repo 成熟度，可以同步打開 `examples/` 與 `tests/`，對照章節內容與實作。
@@ -102,3 +114,5 @@ short_title: 書籍首頁
 - [第六章：排程與資源分配：把撞期工作排成可執行的一天](chapters/ch06-scheduling-and-allocation/index)
 - [第七章：預算與組合：在有限資源下挑出最值得的方案](chapters/ch07-budgeting-and-combinations/index)
 - [第八章：優先佇列與即時任務：讓插單工作也能穩定處理](chapters/ch08-priority-queues-and-triage/index)
+- [第九章：滑動視窗與異常監控：從連續數據找出該出手的區間](chapters/ch09-sliding-windows-and-monitoring/index)
+- [第十章：區間合併與容量規劃：把零碎時段整理成可執行的資源配置](chapters/ch10-interval-merging-and-capacity/index)

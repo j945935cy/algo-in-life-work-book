@@ -4,9 +4,9 @@
 
 ## 目前進度
 
-- 已完成前言與第 1 到第 8 章書稿骨架
-- 已完成 8 組對應範例程式
-- 已建立 8 組章節測試，`pytest -q` 全綠
+- 已完成前言與第 1 到第 10 章書稿骨架
+- 已完成 10 組對應範例程式
+- 已建立 10 組章節測試，`pytest -q` 全綠
 - 已完成新版 Jupyter Book / MyST HTML 本地建站
 - 已補上 GitHub Pages 發布流程
 
@@ -59,6 +59,12 @@ python -c "from examples.ch07.budgeting import select_best_portfolio; items=[{'n
 
 # 執行第八章範例
 python -c "from examples.ch08.triage import summarize_waiting_times; tasks=[{'name':'例行回覆','priority':1,'arrived_at':0,'duration':3},{'name':'VIP 客訴','priority':5,'arrived_at':1,'duration':1},{'name':'系統告警','priority':4,'arrived_at':3,'duration':2}]; print(summarize_waiting_times(tasks))"
+
+# 執行第九章範例
+python -c "from examples.ch09.monitoring import find_alert_windows; values=[3,5,4,8,6,2,7]; print(find_alert_windows(values, window_size=3, threshold=15))"
+
+# 執行第十章範例
+python -c "from examples.ch10.capacity import merge_time_blocks, peak_concurrent_usage; blocks=[{'name':'會議室 A','start':9,'end':11},{'name':'會議室 A 延長','start':11,'end':12},{'name':'設備借用','start':10,'end':13}]; print(merge_time_blocks(blocks), peak_concurrent_usage(blocks))"
 
 # 執行全部測試
 pytest -q

@@ -23,3 +23,5 @@ pytest -q
 - `test_ch06_scheduling_and_allocation.py`
 - `test_ch07_budgeting_and_combinations.py`
 - `test_ch08_priority_queues_and_triage.py`
+- `test_ch09_sliding_windows_and_monitoring.py`
+- `test_ch10_interval_merging_and_capacity.py`
