@@ -35,6 +35,11 @@ project:
       children:
         - file: chapters/ch05-graphs-and-routing/exercises.md
           title: 練習題
+    - file: chapters/ch06-scheduling-and-allocation/index.md
+      title: 第六章：排程與資源分配：把撞期工作排成可執行的一天
+      children:
+        - file: chapters/ch06-scheduling-and-allocation/exercises.md
+          title: 練習題
 
 site:
   template: book-theme

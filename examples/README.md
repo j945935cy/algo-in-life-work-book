@@ -9,10 +9,12 @@
 - `examples/ch03/sorting_search.py`：穩定排序與二分搜尋
 - `examples/ch04/deduplication.py`：資料指紋與穩定去重
 - `examples/ch05/routing.py`：加權圖最短路徑規劃
+- `examples/ch06/scheduling.py`：區間排程、加權排程與衝突檢查
 
 ## 執行方式
 
 ```powershell
 python -m examples.ch01.time_log --help
 python -c "from examples.ch05.routing import shortest_route"
+python -c "from examples.ch06.scheduling import select_highest_value_tasks"
 ```

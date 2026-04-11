@@ -20,3 +20,4 @@ pytest -q
 - `test_ch03_sorting_and_searching.py`
 - `test_ch04_hashing_and_dedup.py`
 - `test_ch05_graphs_and_routing.py`
+- `test_ch06_scheduling_and_allocation.py`
