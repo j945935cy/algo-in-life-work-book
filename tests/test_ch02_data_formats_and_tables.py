@@ -39,7 +39,8 @@ def test_transform_csv_to_parquet_and_numpy(tmp_path: Path) -> None:
 
     df = pd.read_parquet(result_parquet)
     assert list(df.columns) == ["user_id", "score", "joined", "status"]
-    assert df["user_id"].dtype == "Int64"
+    assert pd.api.types.is_integer_dtype(df["user_id"])
+    assert df["user_id"].astype("Int64").tolist() == [1, 2, 3]
     assert pd.isna(df.loc[1, "score"])
     assert df["joined"].isna().sum() == 1
 
