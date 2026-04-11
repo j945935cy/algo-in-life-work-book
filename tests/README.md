@@ -22,3 +22,4 @@ pytest -q
 - `test_ch05_graphs_and_routing.py`
 - `test_ch06_scheduling_and_allocation.py`
 - `test_ch07_budgeting_and_combinations.py`
+- `test_ch08_priority_queues_and_triage.py`

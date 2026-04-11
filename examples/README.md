@@ -11,6 +11,7 @@
 - `examples/ch05/routing.py`：加權圖最短路徑規劃
 - `examples/ch06/scheduling.py`：區間排程、加權排程與衝突檢查
 - `examples/ch07/budgeting.py`：有限預算下的方案組合與最佳化選擇
+- `examples/ch08/triage.py`：優先佇列、插單任務與等待時間估算
 
 ## 執行方式
 
@@ -19,4 +20,5 @@ python -m examples.ch01.time_log --help
 python -c "from examples.ch05.routing import shortest_route"
 python -c "from examples.ch06.scheduling import select_highest_value_tasks"
 python -c "from examples.ch07.budgeting import select_best_portfolio"
+python -c "from examples.ch08.triage import summarize_waiting_times"
 ```

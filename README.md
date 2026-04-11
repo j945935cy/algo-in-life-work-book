@@ -4,9 +4,9 @@
 
 ## 目前進度
 
-- 已完成前言與第 1 到第 7 章書稿骨架
-- 已完成 7 組對應範例程式
-- 已建立 7 組章節測試，`pytest -q` 全綠
+- 已完成前言與第 1 到第 8 章書稿骨架
+- 已完成 8 組對應範例程式
+- 已建立 8 組章節測試，`pytest -q` 全綠
 - 已完成新版 Jupyter Book / MyST HTML 本地建站
 - 已補上 GitHub Pages 發布流程
 
@@ -56,6 +56,9 @@ python -c "from examples.ch06.scheduling import select_highest_value_tasks; task
 
 # 執行第七章範例
 python -c "from examples.ch07.budgeting import select_best_portfolio; items=[{'name':'廣告','cost':5,'value':9},{'name':'客服訓練','cost':4,'value':7},{'name':'報表工具','cost':3,'value':4}]; print(select_best_portfolio(items, 8))"
+
+# 執行第八章範例
+python -c "from examples.ch08.triage import summarize_waiting_times; tasks=[{'name':'例行回覆','priority':1,'arrived_at':0,'duration':3},{'name':'VIP 客訴','priority':5,'arrived_at':1,'duration':1},{'name':'系統告警','priority':4,'arrived_at':3,'duration':2}]; print(summarize_waiting_times(tasks))"
 
 # 執行全部測試
 pytest -q

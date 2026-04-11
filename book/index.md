@@ -22,8 +22,8 @@ short_title: 書籍首頁
 | 項目 | 目前狀態 |
 | --- | --- |
 | 書稿首頁與前言 | 已完成 |
-| 章節骨架 | 已完成第 1 到第 7 章 |
-| 可執行範例 | 已完成 7 組 |
+| 章節骨架 | 已完成第 1 到第 8 章 |
+| 可執行範例 | 已完成 8 組 |
 | 測試 | `pytest -q` 全綠 |
 | HTML 建站 | 已可產出本地站點 |
 
@@ -81,6 +81,12 @@ short_title: 書籍首頁
 
 把採購、課程、工具訂閱或功能排程轉成有限預算下的組合選擇，學會用動態規劃找出總價值最高的方案。
 
+### 第八章
+
+[第八章：優先佇列與即時任務：讓插單工作也能穩定處理](chapters/ch08-priority-queues-and-triage/index)
+
+把客服工單、突發支援與臨時需求轉成優先佇列問題，學會在不打亂整體節奏的前提下，先處理最急迫的任務。
+
 ## 建議閱讀順序
 
 若你是第一次閱讀，建議依序從前言與前三章往下看；若你是想直接評估 repo 成熟度，可以同步打開 `examples/` 與 `tests/`，對照章節內容與實作。
@@ -95,3 +101,4 @@ short_title: 書籍首頁
 - [第五章：圖與路徑：從流程網路找到最短可行路線](chapters/ch05-graphs-and-routing/index)
 - [第六章：排程與資源分配：把撞期工作排成可執行的一天](chapters/ch06-scheduling-and-allocation/index)
 - [第七章：預算與組合：在有限資源下挑出最值得的方案](chapters/ch07-budgeting-and-combinations/index)
+- [第八章：優先佇列與即時任務：讓插單工作也能穩定處理](chapters/ch08-priority-queues-and-triage/index)

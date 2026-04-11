@@ -45,6 +45,11 @@ project:
       children:
         - file: chapters/ch07-budgeting-and-combinations/exercises.md
           title: 練習題
+    - file: chapters/ch08-priority-queues-and-triage/index.md
+      title: 第八章：優先佇列與即時任務：讓插單工作也能穩定處理
+      children:
+        - file: chapters/ch08-priority-queues-and-triage/exercises.md
+          title: 練習題
 
 site:
   template: book-theme
