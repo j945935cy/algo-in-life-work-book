@@ -2,10 +2,12 @@
 
 $ErrorActionPreference = 'Stop'
 
+. (Join-Path $PSScriptRoot 'common.ps1')
+
 Write-Host 'Starting Jupyter Book build...' -ForegroundColor Green
 Push-Location .\book
 try {
-	jupyter-book build --site --html
+	Invoke-WorkspacePython -Arguments @('-m', 'jupyter_book', 'build', '--html')
 }
 finally {
 	Pop-Location

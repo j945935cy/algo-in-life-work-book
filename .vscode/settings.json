@@ -1,33 +1,16 @@
 {
     "chat.tools.terminal.autoApprove": {
-        "/^C:\\\\Users\\\\jack\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\Scripts\\\\jupyter-book\\.exe build \\.\\\\book$/": {
+        "powershell -ExecutionPolicy Bypass -File .\\scripts\\build_book.ps1": {
             "approve": true,
             "matchCommandLine": true
         },
-        "/^cmd /c \"C:\\\\Users\\\\jack\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\Scripts\\\\jupyter-book\\.exe build \\.\\\\book > jb_out\\.txt 2>&1 && type jb_out\\.txt\"$/": {
+        "powershell -ExecutionPolicy Bypass -File .\\scripts\\preview_book.ps1": {
             "approve": true,
             "matchCommandLine": true
         },
-        "/^cmd /c \"C:\\\\Users\\\\jack\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\Scripts\\\\jupyter-book\\.exe build --help > jb_help\\.txt 2>&1 && type jb_help\\.txt\"$/": {
+        "powershell -ExecutionPolicy Bypass -File .\\scripts\\release_check.ps1": {
             "approve": true,
             "matchCommandLine": true
-        },
-        "/^cmd /c \"C:\\\\Users\\\\jack\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\Scripts\\\\jupyter-book\\.exe build --site \\.\\\\book > jb_site_out\\.txt 2>&1 && type jb_site_out\\.txt\"$/": {
-            "approve": true,
-            "matchCommandLine": true
-        },
-        "/^cmd /c \"C:\\\\Users\\\\jack\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\Scripts\\\\jupyter-book\\.exe build --site \\.\\\\book\\\\index\\.md > jb_site_file_out\\.txt 2>&1 && type jb_site_file_out\\.txt\"$/": {
-            "approve": true,
-            "matchCommandLine": true
-        },
-        "/^cmd /c \"C:\\\\Users\\\\jack\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\Scripts\\\\jupyter-book\\.exe build --site \\.\\\\book -o \\.\\\\book\\\\_build > jb_site_file_out2\\.txt 2>&1 && type jb_site_file_out2\\.txt\"$/": {
-            "approve": true,
-            "matchCommandLine": true
-        },
-        "/^C:\\\\Users\\\\jack\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\Scripts\\\\jupyter-book\\.exe build --site --html \\.\\\\book --debug$/": {
-            "approve": true,
-            "matchCommandLine": true
-        },
-        "C:\\Users\\jack\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\jupyter-book.exe": true
+        }
     }
 }

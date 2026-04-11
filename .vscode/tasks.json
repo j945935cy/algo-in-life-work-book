@@ -52,6 +52,23 @@
 				"Preview Book"
 			],
 			"group": "build"
+		},
+		{
+			"label": "Release Check",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				".\\scripts\\release_check.ps1"
+			],
+			"isBackground": false,
+			"group": "test",
+			"presentation": {
+				"reveal": "always",
+				"panel": "dedicated"
+			}
 		}
 	]
 }

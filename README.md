@@ -34,6 +34,7 @@
 ```powershell
 # 安裝相依套件
 python -m pip install -r requirements.txt
+python -m pip install -e .
 
 # 執行第一章範例
 python -m examples.ch01.time_log --help
@@ -71,6 +72,12 @@ pwsh -File .\scripts\preview_book.ps1
 ```
 
 接著用瀏覽器開啟 `http://127.0.0.1:8000/`。
+
+若要在發布前做一鍵檢查，可執行 VS Code task `Release Check`，或直接執行下列指令：
+
+```powershell
+pwsh -File .\scripts\release_check.ps1
+```
 
 ## 發布到 GitHub Pages
 
