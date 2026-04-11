@@ -22,8 +22,8 @@ short_title: 書籍首頁
 | 項目 | 目前狀態 |
 | --- | --- |
 | 書稿首頁與前言 | 已完成 |
-| 章節骨架 | 已完成第 1 到第 10 章 |
-| 可執行範例 | 已完成 10 組 |
+| 章節骨架 | 已完成第 1 到第 12 章 |
+| 可執行範例 | 已完成 12 組 |
 | 測試 | `pytest -q` 全綠 |
 | HTML 建站 | 已可產出本地站點 |
 
@@ -99,6 +99,18 @@ short_title: 書籍首頁
 
 把會議室、設備借用與人力班表轉成時段區間，先合併重疊或相接的占用，再找出同時使用量最高的尖峰區段。
 
+### 第十一章
+
+[第十一章：依賴排序與流程編排：把前後關係排成可執行順序](chapters/ch11-dependency-ordering-and-workflows/index)
+
+把簽核、上線準備與跨部門交付轉成依賴圖，學會用拓樸排序找出可執行順序，並辨認哪些流程卡在循環依賴。
+
+### 第十二章
+
+[第十二章：配對與指派：把人與任務配成可執行的最佳安排](chapters/ch12-matching-and-assignment/index)
+
+把已就緒任務、人員技能與資格限制轉成二分圖，學會用最大配對找出最多可完成的指派，並盤點哪些工作卡在技能缺口。
+
 ## 建議閱讀順序
 
 若你是第一次閱讀，建議依序從前言與前三章往下看；若你是想直接評估 repo 成熟度，可以同步打開 `examples/` 與 `tests/`，對照章節內容與實作。
@@ -116,3 +128,5 @@ short_title: 書籍首頁
 - [第八章：優先佇列與即時任務：讓插單工作也能穩定處理](chapters/ch08-priority-queues-and-triage/index)
 - [第九章：滑動視窗與異常監控：從連續數據找出該出手的區間](chapters/ch09-sliding-windows-and-monitoring/index)
 - [第十章：區間合併與容量規劃：把零碎時段整理成可執行的資源配置](chapters/ch10-interval-merging-and-capacity/index)
+- [第十一章：依賴排序與流程編排：把前後關係排成可執行順序](chapters/ch11-dependency-ordering-and-workflows/index)
+- [第十二章：配對與指派：把人與任務配成可執行的最佳安排](chapters/ch12-matching-and-assignment/index)

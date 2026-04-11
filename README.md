@@ -4,9 +4,9 @@
 
 ## 目前進度
 
-- 已完成前言與第 1 到第 10 章書稿骨架
-- 已完成 10 組對應範例程式
-- 已建立 10 組章節測試，`pytest -q` 全綠
+- 已完成前言與第 1 到第 12 章書稿骨架
+- 已完成 12 組對應範例程式
+- 已建立 12 組章節測試，`pytest -q` 全綠
 - 已完成新版 Jupyter Book / MyST HTML 本地建站
 - 已補上 GitHub Pages 發布流程
 
@@ -65,6 +65,12 @@ python -c "from examples.ch09.monitoring import find_alert_windows; values=[3,5,
 
 # 執行第十章範例
 python -c "from examples.ch10.capacity import merge_time_blocks, peak_concurrent_usage; blocks=[{'name':'會議室 A','start':9,'end':11},{'name':'會議室 A 延長','start':11,'end':12},{'name':'設備借用','start':10,'end':13}]; print(merge_time_blocks(blocks), peak_concurrent_usage(blocks))"
+
+# 執行第十一章範例
+python -c "from examples.ch11.workflow import plan_execution_order; tasks={'送審':['完成文件'],'完成文件':['整理需求'],'整理需求':[],'上線':['送審']}; print(plan_execution_order(tasks))"
+
+# 執行第十二章範例
+python -c "from examples.ch12.assignment import summarize_assignments; ready_tasks=['整理數據','製作簡報','法務檢查']; task_requirements={'整理數據':['數據'],'製作簡報':['簡報'],'法務檢查':['法務']}; worker_skills={'小安':['數據','簡報'],'小美':['法務'],'小傑':['簡報']}; print(summarize_assignments(ready_tasks, task_requirements, worker_skills))"
 
 # 執行全部測試
 pytest -q

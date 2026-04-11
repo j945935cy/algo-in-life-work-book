@@ -14,6 +14,8 @@
 - `examples/ch08/triage.py`：優先佇列、插單任務與等待時間估算
 - `examples/ch09/monitoring.py`：滑動視窗、峰值區間與告警偵測
 - `examples/ch10/capacity.py`：區間合併、占用整併與尖峰容量分析
+- `examples/ch11/workflow.py`：依賴排序、分階段執行與循環依賴檢查
+- `examples/ch12/assignment.py`：任務配對、最大配對與技能缺口分析
 
 ## 執行方式
 
@@ -25,4 +27,6 @@ python -c "from examples.ch07.budgeting import select_best_portfolio"
 python -c "from examples.ch08.triage import summarize_waiting_times"
 python -c "from examples.ch09.monitoring import find_alert_windows"
 python -c "from examples.ch10.capacity import merge_time_blocks, peak_concurrent_usage"
+python -c "from examples.ch11.workflow import plan_execution_order"
+python -c "from examples.ch12.assignment import summarize_assignments"
 ```

@@ -25,3 +25,5 @@ pytest -q
 - `test_ch08_priority_queues_and_triage.py`
 - `test_ch09_sliding_windows_and_monitoring.py`
 - `test_ch10_interval_merging_and_capacity.py`
+- `test_ch11_dependency_ordering_and_workflows.py`
+- `test_ch12_matching_and_assignment.py`
