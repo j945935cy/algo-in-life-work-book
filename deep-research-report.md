@@ -293,7 +293,7 @@ def test_chXX_example(case, expected, tmp_path):
     Act: 呼叫核心函式
     Assert: 檢查輸出
     """
-    # TODO: from algo_in_life.xxx import solve
+    # 範例：from algo_in_life.example import solve
     # result = solve(...)
     # assert result == expected
     assert True

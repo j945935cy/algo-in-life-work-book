@@ -30,6 +30,11 @@ project:
       children:
         - file: chapters/ch04-hashing-and-deduplication/exercises.md
           title: 練習題
+    - file: chapters/ch05-graphs-and-routing/index.md
+      title: 第五章：圖與路徑：從流程網路找到最短可行路線
+      children:
+        - file: chapters/ch05-graphs-and-routing/exercises.md
+          title: 練習題
 
 site:
   template: book-theme

@@ -12,3 +12,11 @@ pytest -q
 
 - `test_chXX_*.py`
 - 每個章節測試對應一個或多個模組
+
+## 目前覆蓋章節
+
+- `test_ch01_time_log.py`
+- `test_ch02_data_formats_and_tables.py`
+- `test_ch03_sorting_and_searching.py`
+- `test_ch04_hashing_and_dedup.py`
+- `test_ch05_graphs_and_routing.py`

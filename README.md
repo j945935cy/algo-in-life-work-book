@@ -4,9 +4,9 @@
 
 ## 目前進度
 
-- 已完成前言與第 1 到第 4 章書稿骨架
-- 已完成 4 組對應範例程式
-- 已建立 4 組章節測試，`pytest -q` 全綠
+- 已完成前言與第 1 到第 5 章書稿骨架
+- 已完成 5 組對應範例程式
+- 已建立 5 組章節測試，`pytest -q` 全綠
 - 已完成新版 Jupyter Book / MyST HTML 本地建站
 - 已補上 GitHub Pages 發布流程
 
@@ -46,6 +46,9 @@ python -c "from examples.ch03.sorting_search import stable_sort, binary_search; 
 
 # 執行第四章範例
 python -c "from examples.ch04.deduplication import deduplicate_records; print(deduplicate_records([{'email': 'A@EXAMPLE.COM '}, {'email': 'a@example.com'}], ['email']))"
+
+# 執行第五章範例
+python -c "from examples.ch05.routing import shortest_route; graph={'A': {'B': 4, 'C': 2}, 'B': {'D': 5}, 'C': {'B': 1, 'D': 8}, 'D': {}}; print(shortest_route(graph, 'A', 'D'))"
 
 # 執行全部測試
 pytest -q

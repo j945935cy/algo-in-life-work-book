@@ -22,8 +22,8 @@ short_title: 書籍首頁
 | 項目 | 目前狀態 |
 | --- | --- |
 | 書稿首頁與前言 | 已完成 |
-| 章節骨架 | 已完成第 1 到第 4 章 |
-| 可執行範例 | 已完成 4 組 |
+| 章節骨架 | 已完成第 1 到第 5 章 |
+| 可執行範例 | 已完成 5 組 |
 | 測試 | `pytest -q` 全綠 |
 | HTML 建站 | 已可產出本地站點 |
 
@@ -63,6 +63,12 @@ short_title: 書籍首頁
 
 把雜湊指紋、重複判定與穩定去重串成一條資料整理流程，適合處理名單合併、客戶清冊與匯入資料清理。
 
+### 第五章
+
+[第五章：圖與路徑：從流程網路找到最短可行路線](chapters/ch05-graphs-and-routing/index)
+
+把節點、邊、權重與最短路徑觀念帶進日常決策，適合處理通勤規劃、簽核流程與任務依賴鏈。
+
 ## 建議閱讀順序
 
 若你是第一次閱讀，建議依序從前言與前三章往下看；若你是想直接評估 repo 成熟度，可以同步打開 `examples/` 與 `tests/`，對照章節內容與實作。
@@ -74,3 +80,4 @@ short_title: 書籍首頁
 - [第二章：資料格式與表格：從 CSV 到 Parquet 與 NumPy 檔](chapters/ch02-data-formats-and-tables/index)
 - [第三章：排序與搜尋：把「找不到」變成可解的問題](chapters/ch03-sorting-and-searching/index)
 - [第四章：雜湊與去重：把重複資料變成可管理的清單](chapters/ch04-hashing-and-deduplication/index)
+- [第五章：圖與路徑：從流程網路找到最短可行路線](chapters/ch05-graphs-and-routing/index)
