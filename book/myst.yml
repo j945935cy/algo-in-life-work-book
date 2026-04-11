@@ -4,7 +4,7 @@ version: 1
 project:
   id: 2f1de4aa-07c4-4ba5-a4bb-94cbc364e840
   title: 日常與職場的演算法應用
-  description: 以實務情境為核心，示範如何用演算法思維解決日常與工作問題。
+  description: 用日常與職場情境帶讀者理解資料結構與演算法，重點放在看得懂、用得上、能重現。
   github: https://github.com/j945935cy/algo-in-life-work-book
   license: MIT
   toc:
@@ -73,3 +73,8 @@ project:
 
 site:
   template: book-theme
+  options:
+    style: shared-assets/styles/site.css
+    outline_maxdepth: 2
+  parts:
+    footer: footer.md

@@ -34,6 +34,7 @@ jobs:
       - name: Build static HTML
         env:
           BASE_URL: /${{ github.event.repository.name }}
+          GITHUB_BASE_REF: master
         run: |
           cd book
           jupyter-book build --html

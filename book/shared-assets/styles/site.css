@@ -1,0 +1,39 @@
+.content p,
+.content li {
+  line-height: 1.9;
+}
+
+.content blockquote {
+  line-height: 1.8;
+}
+
+.content table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.content pre {
+  overflow-x: auto;
+}
+
+.footer {
+  border-top: 1px solid rgba(15, 23, 42, 0.12);
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .content p,
+  .content li {
+    line-height: 1.8;
+  }
+
+  .content table {
+    font-size: 0.95rem;
+  }
+
+  .footer {
+    padding-bottom: 1rem;
+  }
+}
