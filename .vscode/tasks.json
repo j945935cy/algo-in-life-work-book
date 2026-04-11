@@ -1,0 +1,57 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build Book",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				".\\scripts\\build_book.ps1"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Preview Book",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				".\\scripts\\preview_book.ps1"
+			],
+			"isBackground": true,
+			"problemMatcher": {
+				"owner": "custom",
+				"pattern": {
+					"regexp": ".+",
+					"file": 1,
+					"location": 1,
+					"message": 0
+				},
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": "Serving built book at http://127.0.0.1:8000/",
+					"endsPattern": "Serving HTTP on"
+				}
+			},
+			"presentation": {
+				"reveal": "always",
+				"panel": "dedicated"
+			}
+		},
+		{
+			"label": "Build And Preview Book",
+			"dependsOrder": "sequence",
+			"dependsOn": [
+				"Build Book",
+				"Preview Book"
+			],
+			"group": "build"
+		}
+	]
+}

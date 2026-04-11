@@ -1,0 +1,6 @@
+[project]
+name = "algo-in-life-work-book"
+allow = ["pytest", "jb", "python"]
+
+[model]
+default = "gpt-4o-mini"

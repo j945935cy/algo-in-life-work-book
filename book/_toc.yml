@@ -1,0 +1,19 @@
+format: jb-book
+root: index
+
+chapters:
+  - file: chapters/ch01-algorithmic-thinking/index
+    title: 用演算法思維整理日常工作
+    sections:
+      - file: chapters/ch01-algorithmic-thinking/exercises
+        title: 練習題
+  - file: chapters/ch02-data-formats-and-tables/index
+    title: 資料格式與表格：從 CSV 到 Parquet 與 NumPy 檔
+    sections:
+      - file: chapters/ch02-data-formats-and-tables/exercises
+        title: 練習題
+  - file: chapters/ch03-sorting-and-searching/index
+    title: 排序與搜尋：把「找不到」變成可解的問題
+    sections:
+      - file: chapters/ch03-sorting-and-searching/exercises
+        title: 練習題

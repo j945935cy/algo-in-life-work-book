@@ -1,0 +1,4 @@
+user_id,score,joined,status
+1,10,2026-04-01,active
+2,,2026-03-15,inactive
+3,7,invalid,pending

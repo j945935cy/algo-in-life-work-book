@@ -1,0 +1,35 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+
+project:
+  id: 2f1de4aa-07c4-4ba5-a4bb-94cbc364e840
+  title: 日常與職場的演算法應用
+  description: 以實務情境為核心，示範如何用演算法思維解決日常與工作問題。
+  github: https://github.com/j945935cy/algo-in-life-work-book
+  license: MIT
+  toc:
+    - file: index.md
+    - file: preface.md
+    - file: chapters/ch01-algorithmic-thinking/index.md
+      title: 第一章：用演算法思維整理日常工作
+      children:
+        - file: chapters/ch01-algorithmic-thinking/exercises.md
+          title: 練習題
+    - file: chapters/ch02-data-formats-and-tables/index.md
+      title: 第二章：資料格式與表格：從 CSV 到 Parquet 與 NumPy 檔
+      children:
+        - file: chapters/ch02-data-formats-and-tables/exercises.md
+          title: 練習題
+    - file: chapters/ch03-sorting-and-searching/index.md
+      title: 第三章：排序與搜尋：把「找不到」變成可解的問題
+      children:
+        - file: chapters/ch03-sorting-and-searching/exercises.md
+          title: 練習題
+    - file: chapters/ch04-hashing-and-deduplication/index.md
+      title: 第四章：雜湊與去重：把重複資料變成可管理的清單
+      children:
+        - file: chapters/ch04-hashing-and-deduplication/exercises.md
+          title: 練習題
+
+site:
+  template: book-theme

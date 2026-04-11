@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env/
+.env*
+
+# Jupyter Book outputs
+publication/outputs/
+book/_build/
+_build/
+
+# Packaging artifacts
+*.egg-info/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,17 @@
+# Jupyter Book configuration
+
+project:
+  name: "日常與職場的演算法應用"
+  description: "以實務情境為核心，示範如何用演算法思維解決日常與工作問題。"
+  logo: "../publication/outputs/logo.svg"
+
+html:
+  favicon: "../publication/outputs/favicon.ico"
+  use_jupyterlab: false
+
+sphinx:
+  config:
+    html_theme: pydata_sphinx_theme
+
+execute:
+  execute_notebooks: "off"
