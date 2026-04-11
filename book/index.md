@@ -22,8 +22,8 @@ short_title: 書籍首頁
 | 項目 | 目前狀態 |
 | --- | --- |
 | 書稿首頁與前言 | 已完成 |
-| 章節骨架 | 已完成第 1 到第 6 章 |
-| 可執行範例 | 已完成 6 組 |
+| 章節骨架 | 已完成第 1 到第 7 章 |
+| 可執行範例 | 已完成 7 組 |
 | 測試 | `pytest -q` 全綠 |
 | HTML 建站 | 已可產出本地站點 |
 
@@ -75,6 +75,12 @@ short_title: 書籍首頁
 
 把會議、訪談與外勤安排轉成區間排程問題，先找出互不衝突的可行清單，再進一步用加權排程挑出總效益最高的安排。
 
+### 第七章
+
+[第七章：預算與組合：在有限資源下挑出最值得的方案](chapters/ch07-budgeting-and-combinations/index)
+
+把採購、課程、工具訂閱或功能排程轉成有限預算下的組合選擇，學會用動態規劃找出總價值最高的方案。
+
 ## 建議閱讀順序
 
 若你是第一次閱讀，建議依序從前言與前三章往下看；若你是想直接評估 repo 成熟度，可以同步打開 `examples/` 與 `tests/`，對照章節內容與實作。
@@ -88,3 +94,4 @@ short_title: 書籍首頁
 - [第四章：雜湊與去重：把重複資料變成可管理的清單](chapters/ch04-hashing-and-deduplication/index)
 - [第五章：圖與路徑：從流程網路找到最短可行路線](chapters/ch05-graphs-and-routing/index)
 - [第六章：排程與資源分配：把撞期工作排成可執行的一天](chapters/ch06-scheduling-and-allocation/index)
+- [第七章：預算與組合：在有限資源下挑出最值得的方案](chapters/ch07-budgeting-and-combinations/index)

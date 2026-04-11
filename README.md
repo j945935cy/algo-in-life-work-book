@@ -4,9 +4,9 @@
 
 ## 目前進度
 
-- 已完成前言與第 1 到第 6 章書稿骨架
-- 已完成 6 組對應範例程式
-- 已建立 6 組章節測試，`pytest -q` 全綠
+- 已完成前言與第 1 到第 7 章書稿骨架
+- 已完成 7 組對應範例程式
+- 已建立 7 組章節測試，`pytest -q` 全綠
 - 已完成新版 Jupyter Book / MyST HTML 本地建站
 - 已補上 GitHub Pages 發布流程
 
@@ -53,6 +53,9 @@ python -c "from examples.ch05.routing import shortest_route; graph={'A': {'B': 4
 
 # 執行第六章範例
 python -c "from examples.ch06.scheduling import select_highest_value_tasks; tasks=[{'name':'晨會','start':9,'end':10,'value':2},{'name':'訪談','start':9,'end':12,'value':9},{'name':'報表','start':10,'end':11,'value':2}]; print(select_highest_value_tasks(tasks))"
+
+# 執行第七章範例
+python -c "from examples.ch07.budgeting import select_best_portfolio; items=[{'name':'廣告','cost':5,'value':9},{'name':'客服訓練','cost':4,'value':7},{'name':'報表工具','cost':3,'value':4}]; print(select_best_portfolio(items, 8))"
 
 # 執行全部測試
 pytest -q

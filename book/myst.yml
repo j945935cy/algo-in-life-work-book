@@ -40,6 +40,11 @@ project:
       children:
         - file: chapters/ch06-scheduling-and-allocation/exercises.md
           title: 練習題
+    - file: chapters/ch07-budgeting-and-combinations/index.md
+      title: 第七章：預算與組合：在有限資源下挑出最值得的方案
+      children:
+        - file: chapters/ch07-budgeting-and-combinations/exercises.md
+          title: 練習題
 
 site:
   template: book-theme
