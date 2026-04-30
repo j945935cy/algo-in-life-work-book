@@ -31,7 +31,7 @@ short_title: 第十章：區間合併與容量規劃
 - 測試： `pytest -q tests/test_ch10_interval_merging_and_capacity.py`
 - 典型用途：會議室排程、設備借用、人力班表、服務窗口容量評估
 
-## 本章內容概要
+## 零碎時段為何要先合併再分析
 
 當你面對的是一堆零碎時段，第一個常見錯誤就是直接把它們分開看。這會讓你誤以為占用很多段、很複雜，但實際上其中有些時段只是彼此重疊或緊接在一起，應該視為同一段連續占用。
 
@@ -51,7 +51,29 @@ short_title: 第十章：區間合併與容量規劃
 
 ## 實作範例
 
-請參考 `examples/ch10/capacity.py`。
+請參考 `examples/ch10/capacity.py`。請在專案根目錄執行程式，以確保路徑正確。
+
+```python
+from examples.ch10.capacity import merge_time_blocks, peak_concurrent_usage
+
+blocks = [
+    {"name": "Team A", "start": 9, "end": 11},
+    {"name": "Team B", "start": 10, "end": 12},
+    {"name": "Team C", "start": 13, "end": 15},
+]
+
+merged = merge_time_blocks(blocks)
+print("合併後區段:")
+for m in merged:
+    print(f"- {m['name']}: {m['start']} ~ {m['end']}")
+# 合併後區段:
+# - Team A + Team B: 9 ~ 12
+# - Team C: 13 ~ 15
+
+peak_usage, peak_range = peak_concurrent_usage(blocks)
+print(f"最大同時使用量: {peak_usage} (時段 {peak_range})")
+# 最大同時使用量: 2 (時段 (10, 11))
+```
 
 示範流程包含：
 

@@ -31,7 +31,7 @@ short_title: 第七章：預算與組合
 - 測試： `pytest -q tests/test_ch07_budgeting_and_combinations.py`
 - 典型用途：年度採購、教育訓練排程、SaaS 工具訂閱、需求排程取捨
 
-## 本章內容概要
+## 有限預算下的組合選擇
 
 很多現場決策不是「能不能做」，而是「錢不夠時該先做哪些」。如果你只看單價，可能會錯過一組雖然比較貴、但整體更有價值的組合；如果你只看單一方案的價值，也可能把預算卡在少數大項目上，反而失去更好的搭配。
 
@@ -55,7 +55,26 @@ short_title: 第七章：預算與組合
 
 ## 實作範例
 
-請參考 `examples/ch07/budgeting.py`。
+請參考 `examples/ch07/budgeting.py`。請在專案根目錄執行程式，以確保路徑正確。
+
+```python
+from examples.ch07.budgeting import select_best_portfolio
+
+items = [
+    {"name": "方案A (便宜但普通)", "cost": 1, "value": 15},
+    {"name": "方案B (中等)", "cost": 3, "value": 40},
+    {"name": "方案C (極好但昂貴)", "cost": 4, "value": 50},
+    {"name": "方案D (便宜且不錯)", "cost": 2, "value": 20},
+]
+budget = 5
+
+best_value, selected_items = select_best_portfolio(items, budget)
+print(f"最大價值: {best_value}")
+# 最大價值: 60
+print("選擇的方案:", [item["name"] for item in selected_items])
+# 選擇的方案: ['方案B (中等)', '方案D (便宜且不錯)']
+# 說明：方案B(40) + 方案D(20) = 60，成本 3+2 = 5。勝過單選方案C(50)。
+```
 
 示範流程包含：
 

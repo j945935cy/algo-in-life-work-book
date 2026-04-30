@@ -92,7 +92,7 @@ foreach ($chapterDirectory in $chapterDirectories) {
 }
 
 Write-Host 'Checking metadata placeholders...' -ForegroundColor Cyan
-Assert-NoPlaceholder -RelativePath 'CITATION.cff' -Patterns @('YourLastName', 'YourFirstName')
+Assert-NoPlaceholder -RelativePath 'CITATION.cff' -Patterns @('YourLastName', 'YourFirstName', 'TODO_FAMILY_NAME', 'TODO_GIVEN_NAME', 'Repo Owner')
 
 Write-Host 'Running test suite...' -ForegroundColor Cyan
 Push-Location $workspaceRoot

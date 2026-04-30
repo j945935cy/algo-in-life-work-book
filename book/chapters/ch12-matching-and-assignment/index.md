@@ -31,7 +31,7 @@ short_title: 第十二章：配對與指派
 - 測試： `pytest -q tests/test_ch12_matching_and_assignment.py`
 - 典型用途：客服案件分流、面試官指派、審稿安排、跨部門 ready 任務認領
 
-## 本章內容概要
+## 任務 Ready 之後，還差一個「誰來做」
 
 流程排好了，真正開始做事之前，還有一個常被低估的問題：誰來做。就算某項任務已經 ready，如果現場沒有合適的人、或唯一合適的人已經被別的工作占住，這件事仍然做不下去。
 
@@ -69,7 +69,36 @@ short_title: 第十二章：配對與指派
 
 ## 實作範例
 
-請參考 `examples/ch12/assignment.py`。
+請參考 `examples/ch12/assignment.py`。請在專案根目錄執行程式，以確保路徑正確。
+
+```python
+from examples.ch12.assignment import summarize_assignments
+
+ready_tasks = ["Task1", "Task2", "Task3"]
+task_reqs = {
+    "Task1": ["Python"],
+    "Task2": ["Python", "SQL"],
+    "Task3": ["Design"],
+}
+workers = {
+    "Alice": ["Python", "SQL"],
+    "Bob": ["Python"],
+    "Charlie": ["Management"],
+}
+
+summary = summarize_assignments(ready_tasks, task_reqs, workers)
+print("任務指派:")
+for worker, task in summary["assignments"].items():
+    print(f"- {worker} 負責 {task}")
+# 任務指派:
+# - Bob 負責 Task1
+# - Alice 負責 Task2
+
+print("未分配任務:", summary["unassigned_tasks"])
+# 未分配任務: ['Task3']
+print("閒置人員:", summary["idle_workers"])
+# 閒置人員: ['Charlie']
+```
 
 示範流程包含：
 

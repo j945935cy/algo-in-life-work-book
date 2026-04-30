@@ -31,7 +31,7 @@ short_title: 第八章：優先佇列與即時任務
 - 測試： `pytest -q tests/test_ch08_priority_queues_and_triage.py`
 - 典型用途：客服工單、IT 支援、值班告警、營運插單需求
 
-## 本章內容概要
+## 持續插單的場景為何需要優先佇列
 
 很多工作現場不是先把所有事情排好就能照表操課，而是任務會在過程中不斷插進來。這時如果每來一件新任務就重新排序整張清單，成本高，也很難說明目前的處理邏輯。
 
@@ -60,11 +60,29 @@ short_title: 第八章：優先佇列與即時任務
 2. 最久的那一件卡了多久？
 3. 是不是某幾種高優先插單，讓其他事情普遍變慢？
 
-因此第 8 章除了處理順序，也補上等待時間摘要。這樣你不只知道系統怎麼排，還能用數字說明目前流程的服務品質。
+因此本章除了處理順序，也補上等待時間摘要。這樣你不只知道系統怎麼排，還能用數字說明目前流程的服務品質。
 
 ## 實作範例
 
-請參考 `examples/ch08/triage.py`。
+請參考 `examples/ch08/triage.py`。請在專案根目錄執行程式，以確保路徑正確。
+
+```python
+from examples.ch08.triage import build_triage_order, summarize_waiting_times
+
+tasks = [
+    {"name": "系統崩潰修復", "priority": 1, "arrived_at": 0, "duration": 30},
+    {"name": "密碼重置", "priority": 3, "arrived_at": 5, "duration": 5},
+    {"name": "VIP 請求", "priority": 2, "arrived_at": 10, "duration": 15},
+]
+
+order = build_triage_order(tasks)
+print("處理順序:", [t["name"] for t in order])
+# 處理順序: ['系統崩潰修復', 'VIP 請求', '密碼重置']
+
+summary = summarize_waiting_times(tasks)
+print("最久等待任務:", summary["longest_wait_task"])
+# 最久等待任務: 密碼重置
+```
 
 示範流程包含：
 

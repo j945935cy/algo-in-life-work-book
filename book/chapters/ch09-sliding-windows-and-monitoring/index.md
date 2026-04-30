@@ -31,7 +31,7 @@ short_title: 第九章：滑動視窗與異常監控
 - 測試： `pytest -q tests/test_ch09_sliding_windows_and_monitoring.py`
 - 典型用途：錯誤監控、流量尖峰判斷、營運量能預警、工單暴增區段分析
 
-## 本章內容概要
+## 監控問題為何要看一段時間，而不是單一時間點
 
 很多監控問題看起來像是在問「哪個時間點最大」，但真正有意義的問題往往是「哪一段時間持續偏高」。例如單一分鐘流量高，未必代表系統異常；但連續 15 分鐘都高，通常就值得介入。
 
@@ -57,7 +57,23 @@ short_title: 第九章：滑動視窗與異常監控
 
 ## 實作範例
 
-請參考 `examples/ch09/monitoring.py`。
+請參考 `examples/ch09/monitoring.py`。請在專案根目錄執行程式，以確保路徑正確。
+
+```python
+from examples.ch09.monitoring import find_alert_windows, max_window_sum
+
+traffic = [10, 15, 80, 90, 85, 20, 10]
+window_size = 3
+threshold = 200
+
+alerts = find_alert_windows(traffic, window_size, threshold)
+print("超標區段:", alerts)
+# 超標區段: [(2, 5, 255)] # 索引 2~4 總和為 255
+
+best_sum, best_range = max_window_sum(traffic, window_size)
+print(f"最大區段: 索引 {best_range}，總量 {best_sum}")
+# 最大區段: 索引 (2, 5)，總量 255
+```
 
 示範流程包含：
 

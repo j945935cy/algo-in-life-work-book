@@ -32,12 +32,9 @@ jobs:
           pip install -e .
 
       - name: Build static HTML
-        env:
-          BASE_URL: /${{ github.event.repository.name }}
-          GITHUB_BASE_REF: master
         run: |
           cd book
-          jupyter-book build --html
+          jupyter-book build --html --path-output _build .
           touch _build/html/.nojekyll
 
       - name: Configure GitHub Pages

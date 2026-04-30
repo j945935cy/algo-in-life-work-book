@@ -31,7 +31,7 @@ short_title: 第十一章：依賴排序與流程編排
 - 測試： `pytest -q tests/test_ch11_dependency_ordering_and_workflows.py`
 - 典型用途：簽核流程、產品上線準備、資料管線執行順序、跨部門任務協作
 
-## 本章內容概要
+## 有前後依賴的工作，不能只靠直覺排
 
 很多工作不是單純列清單就能做，而是有明確先後順序。你不能先上線再送審，也不能先送審再完成文件。這類問題的核心不是挑哪件先做最快，而是先釐清哪些事情必須等別的事情完成。
 
@@ -54,7 +54,32 @@ short_title: 第十一章：依賴排序與流程編排
 
 ## 實作範例
 
-請參考 `examples/ch11/workflow.py`。
+請參考 `examples/ch11/workflow.py`。請在專案根目錄執行程式，以確保路徑正確。
+
+```python
+from examples.ch11.workflow import plan_execution_order, group_execution_stages
+
+tasks = {
+    "A": [],          # 無依賴
+    "B": [],          # 無依賴
+    "C": ["A", "B"],  # 依賴 A, B
+    "D": ["B"],       # 依賴 B
+    "E": ["C", "D"],  # 依賴 C, D
+}
+
+order = plan_execution_order(tasks)
+print("執行順序:", order)
+# 執行順序: ['A', 'B', 'C', 'D', 'E']
+
+stages = group_execution_stages(tasks)
+print("分階段執行清單:")
+for i, stage in enumerate(stages):
+    print(f"階段 {i+1}: {stage}")
+# 分階段執行清單:
+# 階段 1: ['A', 'B']
+# 階段 2: ['C', 'D']
+# 階段 3: ['E']
+```
 
 示範流程包含：
 

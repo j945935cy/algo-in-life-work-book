@@ -3,6 +3,6 @@
 - [回書籍首頁](/)
 - [前往前言](/preface)
 - [從第一章開始](/index-1)
-- [查看 GitHub 專案](https://github.com/j945935cy/algo-in-life-work-book)
+- [查看 Happy eBook](https://happyebook.com)
 
 如果你是第一次閱讀，建議先從前言和第一章開始；如果你是帶著問題來找方法，也可以直接從章節導覽挑和自己情境最接近的一章。

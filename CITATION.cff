@@ -1,8 +1,8 @@
 cff-version: 1.2.0
-title: "algo-in-life-work-book"
+title: "日常與職場的演算法應用"
 authors:
-  - family-names: "j945935cy"
-    given-names: "Repo Owner"
+  - family-names: "eBook"
+    given-names: "Happy"
 version: "0.1.0"
 date-released: 2026-04-11
-url: "https://github.com/j945935cy/algo-in-life-work-book"
+url: "https://happyebook.com"

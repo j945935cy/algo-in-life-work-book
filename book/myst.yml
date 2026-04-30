@@ -5,7 +5,7 @@ project:
   id: 2f1de4aa-07c4-4ba5-a4bb-94cbc364e840
   title: 日常與職場的演算法應用
   description: 用日常與職場情境帶讀者理解資料結構與演算法，重點放在看得懂、用得上、能重現。
-  github: https://github.com/j945935cy/algo-in-life-work-book
+  github: https://github.com/HappyeBook/algo-in-life-work-book
   license: MIT
   toc:
     - file: index.md

@@ -31,7 +31,7 @@ short_title: 第六章：排程與資源分配
 - 測試： `pytest -q tests/test_ch06_scheduling_and_allocation.py`
 - 典型用途：會議排程、拜訪安排、設備借用、工單時段配置
 
-## 本章內容概要
+## 從撞期任務到可執行安排
 
 本章會把「今天事情很多，但時間不夠」這類問題轉成區間排程。第一步先用貪婪法找出一組互不衝突、數量最多且可重現的任務安排。
 
@@ -59,7 +59,28 @@ short_title: 第六章：排程與資源分配
 
 ## 實作範例
 
-請參考 `examples/ch06/scheduling.py`。
+請參考 `examples/ch06/scheduling.py`。請在專案根目錄執行程式，以確保路徑正確。
+
+```python
+from examples.ch06.scheduling import select_non_overlapping_tasks, select_highest_value_tasks
+
+tasks = [
+    {"name": "Team A Meeting", "start": 9, "end": 11, "value": 30},
+    {"name": "Client Call", "start": 10, "end": 12, "value": 50},
+    {"name": "Sync Up", "start": 11, "end": 13, "value": 20},
+    {"name": "Project Review", "start": 13, "end": 15, "value": 40},
+]
+
+# 1. 貪婪法：排最多件
+most_tasks = select_non_overlapping_tasks(tasks)
+print("最多件安排:", [t["name"] for t in most_tasks])
+# 最多件安排: ['Team A Meeting', 'Sync Up', 'Project Review']
+
+# 2. 加權排程：總效益最高
+best_value, best_tasks = select_highest_value_tasks(tasks)
+print(f"最高效益 ({best_value}):", [t["name"] for t in best_tasks])
+# 最高效益 (90): ['Client Call', 'Project Review']
+```
 
 示範流程包含：
 
