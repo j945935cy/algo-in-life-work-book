@@ -31,17 +31,17 @@ jobs:
       - name: Verify test collection
         id: collect
         continue-on-error: true
-        run: pytest --collect-only -q
+        run: python -m pytest --collect-only -q
       - name: Show collection diagnostics
         if: steps.collect.outcome == 'failure'
         run: |
-          pytest --collect-only -vv --full-trace
+          python -m pytest --collect-only -vv --full-trace
           python -m pip check
           pip list
           exit 1
       - name: Run pytest
         if: steps.collect.outcome == 'success'
-        run: pytest -q -ra
+        run: python -m pytest -q -ra
       - name: Dump diagnostics on failure
         if: failure()
         run: |
