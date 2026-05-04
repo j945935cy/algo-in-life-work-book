@@ -129,11 +129,40 @@ processed_path, snapshot_path = transform_file(
 
 測試案例示範了一個含缺值與格式錯誤的 CSV 轉換流程：
 
-```
+```csv
 user_id,score,joined,status
 1,10,2026-04-01,active
 2,,2026-03-15,inactive      ← score 缺值
 3,7,invalid,pending         ← joined 格式錯誤
+```
+
+以下是執行資料轉換的範例程式碼（請在專案根目錄執行）：
+
+```python
+from examples.ch02.data_transform import transform_file
+from pathlib import Path
+
+# 定義預期的資料型態
+schema = {
+    "user_id": "int",
+    "score": "float",
+    "joined": "datetime",
+    "status": "string",
+}
+
+raw_csv = Path("data/raw/ch02_sample.csv")
+processed_dir = Path("data/processed")
+processed_dir.mkdir(parents=True, exist_ok=True)
+
+# 執行轉換：讀取 CSV -> 依據 Schema 轉型 -> 存成 Parquet 與 NumPy 備份
+processed_path, snapshot_path = transform_file(
+    source_path=raw_csv,
+    processed_path=processed_dir / "ch02_data.parquet",
+    snapshot_path=processed_dir / "ch02_data.npy",
+    schema=schema,
+)
+
+print(f"Data successfully transformed and saved to: {processed_path}")
 ```
 
 轉換後：
