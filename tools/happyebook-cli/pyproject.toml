@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "happyebook"
+version = "0.1.0"
+description = "Official CLI tools for building and checking Happy eBook projects"
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.0",
+    "tomli>=2.0; python_version<'3.11'",
+]
+
+[project.scripts]
+happyebook = "happyebook.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
