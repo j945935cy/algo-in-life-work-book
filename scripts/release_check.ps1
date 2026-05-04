@@ -58,6 +58,12 @@ foreach ($requiredFile in $requiredFiles) {
     Assert-PathExists -RelativePath $requiredFile
 }
 
+Write-Host 'Checking RELEASE_CHECKLIST.md for uncompleted items...' -ForegroundColor Cyan
+$checklistContent = Get-Content (Join-Path $workspaceRoot 'publication/RELEASE_CHECKLIST.md') -Raw
+if ($checklistContent -match '\[\s\]') {
+    throw "Unchecked items found in RELEASE_CHECKLIST.md. Please complete manual checks and change `[ ]` to `[x]`."
+}
+
 Write-Host 'Checking chapter linkage...' -ForegroundColor Cyan
 $mystContent = Get-Content (Join-Path $bookRoot 'myst.yml') -Raw
 $chapterDirectories = Get-ChildItem $chaptersRoot -Directory | Sort-Object Name
@@ -77,6 +83,21 @@ foreach ($chapterDirectory in $chapterDirectories) {
 
     Assert-PathExists -RelativePath $chapterIndex
     Assert-PathExists -RelativePath $chapterExercises
+
+    $fullChapterIndex = Join-Path $workspaceRoot $chapterIndex
+    $indexContent = Get-Content $fullChapterIndex -Raw
+    if ($indexContent -notmatch '```python') {
+        throw "$chapterRelativeRoot is missing a python code block. See AUTHOR_GUIDELINES.md."
+    }
+    if ($indexContent -notmatch '請在專案根目錄執行') {
+        throw "$chapterRelativeRoot is missing the root execution instruction ('請在專案根目錄執行')."
+    }
+
+    $textWithoutCode = $indexContent -replace '```python[\s\S]*?```', ''
+    $wordCount = $textWithoutCode.Length
+    if ($wordCount -lt 2000) {
+        Write-Host "Warning: $chapterSlug word count is $wordCount (excluding code blocks). Consider expanding the chapter to meet the 2000-word guideline." -ForegroundColor Yellow
+    }
 
     if (-not (Test-Path $exampleDirectory)) {
         throw "Missing example directory for $chapterKey at examples/$chapterKey"
